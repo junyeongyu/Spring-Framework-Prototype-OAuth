@@ -1,4 +1,4 @@
-package com.junyeong.yu.prototype.boot;
+package com.junyeong.yu.prototype.oauth;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,23 +9,29 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.hamcrest.CoreMatchers.*;
 
 @RunWith(SpringRunner.class)
 @AutoConfigureMockMvc
 @SpringBootTest
-public class SampleControllerTests {
+public class SampleRestControllerTests {
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
-    public void indexTest() throws Exception {
-        mockMvc.perform(get("/sample/"))
+    public void helloJsonTest() throws Exception {
+        mockMvc.perform(get("/sample/api/").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(view().name("sample/index"));
+                .andExpect(jsonPath("name", is("Hello World!"))) ;
+    }
+
+    @Test
+    public void helloTextTest() throws Exception {
+        mockMvc.perform(get("/sample/api/").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().string(equalTo("{name: \"Hello World!\"}")));
     }
 }

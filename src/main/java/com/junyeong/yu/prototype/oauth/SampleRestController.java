@@ -1,7 +1,7 @@
-package com.junyeong.yu.prototype.boot;
+package com.junyeong.yu.prototype.oauth;
 
-import com.junyeong.yu.prototype.boot.model.User;
-import com.junyeong.yu.prototype.boot.repository.UserRepository;
+import com.junyeong.yu.prototype.oauth.model.User;
+import com.junyeong.yu.prototype.oauth.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

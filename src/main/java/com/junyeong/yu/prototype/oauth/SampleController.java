@@ -1,4 +1,4 @@
-package com.junyeong.yu.prototype.boot;
+package com.junyeong.yu.prototype.oauth;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

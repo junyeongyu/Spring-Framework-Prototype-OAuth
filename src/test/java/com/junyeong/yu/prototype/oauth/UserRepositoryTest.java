@@ -1,19 +1,16 @@
-package com.junyeong.yu.prototype.boot;
+package com.junyeong.yu.prototype.oauth;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.model.*;
-import com.junyeong.yu.prototype.boot.model.User;
-import com.junyeong.yu.prototype.boot.repository.UserRepository;
+import com.junyeong.yu.prototype.oauth.model.User;
+import com.junyeong.yu.prototype.oauth.repository.UserRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;

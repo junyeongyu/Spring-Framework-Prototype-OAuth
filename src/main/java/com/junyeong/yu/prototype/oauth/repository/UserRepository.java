@@ -1,6 +1,6 @@
-package com.junyeong.yu.prototype.boot.repository;
+package com.junyeong.yu.prototype.oauth.repository;
 
-import com.junyeong.yu.prototype.boot.model.User;
+import com.junyeong.yu.prototype.oauth.model.User;
 import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
 import org.socialsignin.spring.data.dynamodb.repository.EnableScanCount;
 import org.springframework.data.domain.Page;

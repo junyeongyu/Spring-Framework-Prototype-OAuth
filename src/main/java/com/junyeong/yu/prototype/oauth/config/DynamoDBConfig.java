@@ -1,4 +1,4 @@
-package com.junyeong.yu.prototype.boot.config;
+package com.junyeong.yu.prototype.oauth.config;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.util.StringUtils;
 
 @Configuration
-@EnableDynamoDBRepositories(basePackages = "com.junyeong.yu.prototype.boot.repository")
+@EnableDynamoDBRepositories(basePackages = "com.junyeong.yu.prototype.oauth.repository")
 public class DynamoDBConfig {
 
     @Value("${amazon.dynamodb.endpoint}")

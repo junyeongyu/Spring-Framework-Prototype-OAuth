@@ -1,4 +1,4 @@
-package com.junyeong.yu.prototype.boot;
+package com.junyeong.yu.prototype.oauth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
