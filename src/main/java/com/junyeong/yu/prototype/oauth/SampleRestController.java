@@ -5,6 +5,7 @@ import com.junyeong.yu.prototype.oauth.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,6 +23,7 @@ public class SampleRestController {
         return "{name: \"Hello World!\"}";
     }
 
+    @PreAuthorize("#oauth2.hasScope('read')")
     @RequestMapping("/userList")
     @ResponseBody
     public Object userList() {
